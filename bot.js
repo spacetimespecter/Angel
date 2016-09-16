@@ -5,19 +5,13 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy$/; botRegexDt = /^\/d4/;
+      botRegex = /^\/cool guy$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
-  } 
-  else if(request.text && botRegexDt.test(request.text)) {
-    this.res.writeHead(200);
-    postRoll();
-    this.res.end();
-  }
-  else {
+  } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
@@ -28,14 +22,6 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   botResponse = cool();
-  
-function postRoll() {
-  var botResponse, options, body, botReq;
-
-  botResponse = String[] proper_noun = {"Fred", "Jane", "Richard Nixon", "Miss America"};
-Random random = new Random();
-int index = random.nextInt(proper_noun.length);
-System.out.println(proper_noun[index]);
 
   options = {
     hostname: 'api.groupme.com',
