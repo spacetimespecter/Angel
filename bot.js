@@ -12,7 +12,7 @@ function respond() {
     postMessage();
     this.res.end();
   } 
-  if(request.text && botRegexDt.test(request.text)) {
+  else if(request.text && botRegexDt.test(request.text)) {
     this.res.writeHead(200);
     postRoll();
     this.res.end();
